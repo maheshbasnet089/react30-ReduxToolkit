@@ -32,6 +32,7 @@ export function register(data){
             const response =  await axios.post('https://react30.onrender.com/api/user/register',data)
             if(response.status === 201){
              dispatch(setUser(data))
+          
              dispatch(setStatus(STATUSES.SUCCESS))
             }else{
                 dispatch(setStatus(STATUSES.ERROR))
