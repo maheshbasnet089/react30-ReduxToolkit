@@ -15,14 +15,12 @@ const Register = () => {
  }
 
 useEffect(()=>{
-  
+  console.log(status)
   // check the status value 
   // status--> success -> navigate to login page else register page
   if(status === STATUSES.SUCCESS){
      navigate('/login') 
      dispatch(setStatus(null))
-  }else{
-    navigate("/register")
   }
 },[status])
 
